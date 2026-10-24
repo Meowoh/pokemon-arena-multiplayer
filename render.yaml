@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: pokemon-arena-multiplayer
+    runtime: node
+    plan: free
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
